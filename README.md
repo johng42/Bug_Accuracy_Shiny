@@ -2,11 +2,13 @@
 R version of bug accuracy stochastic sim
 
 
+Link to simulation: https://johng42.shinyapps.io/Bug_Accuracy/ 
+
 A tester on my team saw a new tool that promises >90% accuracy in performing validations and wanted to integrate that into our automation.  I immediately replied “No!  That is not nearly ready for general use.”  
 
 The immediate reaction I had stunned the engineer a bit.  I wanted to explain why I had such an emphatic reaction.  In the past, I would try to explain the statistics behind why this is not a valid test to actually use.  Being a mathematician at heart, I would rely on some probability theory in my explanation.  Sadly, when I tried this approach, I would notice eyes glazing over when I started to say things like, “The probability of A given the probability of B…”  As a result, I was not able to effectively explain why this is a bad validation to implement, and the team would just kind of nod along and never be convinced that we wanted to avoid this.  Now, we all know that most folks around here are pretty smart and there should be a way to explain this that makes sense without getting into the details of the finer points of statistics.  
 
-After mulling this over for quite a while, I finally decided to try something we all understand around here: code.  I wrote a little down-n-dirty simulation - https://johng42.shinyapps.io/Bug_Accuracy/ -  to show the necessity of accurate tests.  In mathematical lingo, this is a stochastic simulation of the following model:
+After mulling this over for quite a while, I finally decided to try something we all understand around here: code.  I wrote a little down-n-dirty simulation - link above -  to show the necessity of accurate tests.  In mathematical lingo, this is a stochastic simulation of the following model:
 1.	Assume you are testing 10K lines of code
 2.	You can set the percent chance any line of code contains a bug.  By default, this is 0.5%
 3.	You also control how accurate your test is.  The default is 90% accurate
@@ -22,8 +24,3 @@ Tl,dr; You need tests that have a 99.93% accuracy to get near tests identifying 
 
 
 Bonus fun: change the nouns in this sim from "bug" to "terrorist" and from "clean code" to "innocent citizen."  
-
-
-
-Thanks,
-John
